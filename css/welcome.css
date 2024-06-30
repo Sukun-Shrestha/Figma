@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+   font-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url("https://images.unsplash.com/photo-1617788138017-80ad40651399?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRlc2xhfGVufDB8fDB8fHww");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+  
+  
+  .neon {
+    font-family: 'Arial', sans-serif;
+    font-size: 4rem;
+    color: #000000;
+    text-align: center;
+    position: relative;
+    animation: reveal 2s ease-out forwards, neon 1.5s infinite alternate;
+  }
+  
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes neon {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #25060d, 0 0 40px #3c0606, 0 0 70px #660808, 0 0 80px #3e0b0b, 0 0 100px #972727, 0 0 150px #922d3a;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0a010a, 0 0 20px #340303, 0 0 35px #860c0c, 0 0 40px #8b0505, 0 0 50px #681919, 0 0 75px #ff001e;
+    }
+  }
+  

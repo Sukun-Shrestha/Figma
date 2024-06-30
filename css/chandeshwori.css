@@ -1,0 +1,75 @@
+body {
+  background-image: url("../c8ba30ee61944cc26dbde4022a0a4b72.gif");
+  background-repeat: no-repeat;
+  background-size: 1350px;
+}
+
+.temple {
+  height: 100vh;
+}
+
+.celebrate {
+  position: absolute;
+  top: 555px;
+  display: block;
+  margin-left: 500px;
+  margin-right: auto;
+  width: 30%;
+
+}
+
+.all {
+  position: relative;
+}
+
+
+
+.person {
+  position: absolute;
+  top: 430px;
+  right: 20%;
+}
+
+
+
+ /* Style for the container */
+ .audio-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  
+  text-align: center;
+  line-height: 200px;
+  cursor: pointer;
+  bottom: 20px;
+  left: 700px;
+  
+}
+
+/* Style for the audio */
+audio {
+  display: none; /* Hide the audio player by default */
+}
+ 
+
+  
+
+
+.person img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.logo img {
+  height: 50px; /* Adjust as needed */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+  
+}
+
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #666;
+}
+
+
+
+    .container {
+        /* display: flex; */
+    }
+
+   .left {
+        background-color: black;
+       
+        height: 200px;
+
+    }
+
+
+    .right {
+
+        background-color: red;
+        
+        height: 200px;
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .left {
+            width: 100%;
+            background-color: red;
+
+        }
+
+        .right {
+            width: 100%;
+            background-color: black;
+        }
+    }
+
+    
+</style>
+</head>
+<body>
+
+    <header style="background-color: black;">
+        <div class="container">
+          <div class="logo">
+            
+            <h2 style="color: aliceblue; font-family: 'Courier New', Courier, monospace;">LAPTOP</h2>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <br>
+      <br>
+
+
+<picture>
+  <source srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0-VXEoQZwOvjP96IFoTnyumPUv_isZqTxww&s" media="(max-width: 600px)">
+  <source srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrtRIBAigm1kZR3jNPMTwvpDpClZ6WBWmA7A&s" media="(max-width: 1500px)">
+  <source srcset="flowers.jpg">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrtRIBAigm1kZR3jNPMTwvpDpClZ6WBWmA7A&s" alt="Laptop" style="width:auto;">
+</picture>
+
+<hr>
+
+
+<div class="container">
+    <div class="left">
+        <p style="color: aliceblue;">
+            Laptop computers come in a variety of configurations. Most normal components of a laptop, must be manufactured differently than their desktop equivalents due to the components needing to be smaller and able to perform the same functions with less space and power. Because of this, laptop computers are normally more expensive than equivalently desktop systems due to the higher expense of manufacturing.
+
+        </p>
+
+    </div>
+    <div class="right">
+        <p style="color: aliceblue";>
+            Laptops are convenient but also have disadvantages compared to desktops. Laptop computers are difficult to repair, upgrade or modify. While storage drives and RAM are usually accessible because these are the things you will most likely upgrade, it is often difficult to modify or replace your CPU, graphics chip or motherboard. These jobs will usually require professional technician.
+        </p>
+
+    </div>
+</div>
+
+</body>
+</html>

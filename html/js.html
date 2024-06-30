@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Semi-final</h1>
+
+
+<button onclick="myFunction()">Hide elements</button>
+
+<h2 class="game">Real-Madrid</h2>
+<h3>Captain</h3>
+<h4>Toni Kroos</h4>
+
+<h2 class="game">Paris</h2>
+<h3>Captain</h3>
+<h4>Marquinhos</h4>
+
+<h2 class="game">Bayan</h2>
+<h3>Captain</h3>
+<h4>Manuel Neuer</h4>
+
+<h2 class="game">Dortmund</h2>
+<h3>Captain</h3>
+<h4></h4>
+
+<script>
+function myFunction() {
+  var x = document.getElementsByClassName("game");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label {
+  float: right;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #ffcc00;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .navbar {
+    background-color: #003366;
+    overflow: hidden;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    background-color: #001f4d;
+  }
+
+
+</style>
+</head>
+<body>
+   
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAkFBMVEX////sGy7qAAD60dP2r7DsHDDsFSrsABj96ev2ra34x8j72tzrABL5xMbwZmz84+XsCCP+9/j0lZrvT1f97/D1pKjzhoz0jpT1n6TuO0nxbXX2qa74vcDrAB3rAAr3s7fyfYTtKzvxc3vtNTjwWWLtO0DwZGXvWVvuSErygYLuSVDzj4/vR1Xxd3nsKCvwbG0pB/zNAAAKaUlEQVR4nO2bC3eqOhOGQ5BACZcEIyAQQIttrdr+/3/3TQIqXtpz9l72s56VZ511ttznzWVmcilCBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwWAwGAwGg+EWxJl9bxNuB317bvnxiH9z6+/HfpfsuUScVkmxrZt7m/M3iEMNhHNiEYlx7UqJH7PF5Z03/KoWxFI4hC28b5/5rYhPPBl+NoMYwjpxV5v+mifC3Lj/ObOUGId9tI9ZLyiOXCeI+t+JrhjmJA9aLyiXxHJwpX9nUmuZnPpkOrn23C+EpiumOsmztj8FMWwRntxQptPsPrb9ISJ9k8xR3cRN1XEKLW5Oj9dp/jl1XPwQjS55Y8zqIY4PJ9YSbw+Wx8l0ZUlGcHJHE/8t9hYDgey9MXtFiO/wcugucfbMGCNwjdQPUTFgPW2yaBEEUjImMyRedCVwO5XYJb1IC8/ubeWf4dmTtFu9UI9yLuxW4mAQomrsMVMBD6w+UwIEswfLnblH7bCqROxV66krx2IIeZx804vtqplly26BP3zageE0ici4buQjREzPDst8s4venRoHLpOOjUqcKscVN+sF3rtsi63ie5v6z1QQRNzAhTiiW1PtqySN9W1K2PlRTt3e19B/A09dkOEMFmMImX5gucUQU3g8mWPWX32EURov3EPHUHmmWAa9qAHhT7HSC875jlb+W8T70JIcrEb7Mb4wPC60n8b5nSz8E7xV31/wE1LNrta6TuM9TyCrIQ+RaXY6+5e5CoueOyg7i5G8fF3U3V3M+zNUzRCW6XIv8eC80ovbwuKt+r/b9qeIZwJa1loLt/aB0r0SV/zf32tsECN3fR4Z4r2XZsWdzfo7KofIaMiJ3w8hn1jh94/9ThISTAct9FAxUDXRg+XJmmXg7H1uJEeJslPe1ay/4+UQP+KPcdovXx5vPCbmB5tTNgxeBof2+53XOfQQ18Wbjp7MeSaMQOdhU/rdg7+bmUPAsS0+/Th7dVwQVj/C7NJ1eMRIsNhpj8yb3VxKtnqAtP86zQI762PC4icdwekjumekpv7YujqxnTbrj4eMnJDVJOFFii98/zGrRlwdrTymFoPB8N/CDgF/n0ZyOKjAY/EK/j2MiUVs+2GPf8Uzq9PjMx7d390/om6q+vcOxOr8D+R0HXbdQO5T39gNXDUr6cFZPaukDGnSbm65Gjy/MKGB04F7PBblbutI90DtcDXSdt3RbGdaw+EPjOsitX4n96lvTAiptRjLGsTYnyRg+4Sfbc/FiDaA0TM+ZDj803XZeMTDFmC0j8dTt+IdXshWt5/GifTwRCb8ICbQYpxBTLwKIE0O8MDiXIytp2rY+/64xXpuHR8hF2Ig81bf3PyQGLbyvxAzd+GzVhraA+fzfkkNgxt4wWCpwGCnu8pmB3I1sD4Rwz+ZxeC/6c3TbSUGrAn0csulGGWFnJ5LOBIviCw6YrFhE0oVgJbC42POxVQrwqKCWe7TT4hZdIz0nxqJcbSYLbOI883OuAY7uPIXhAzrTLlrkSud4UTMxnWw72NHRrdemwIxpKPwZr2R7LxmRGA58vPruXCxZWRhozdikX6fSeJC/7lsPmMx9pRZGHHwKe6tXUCkGq+I3H5/z7mYUH7fUaEU3FagXFrstZ+GhppZXE4/jcXkgVVn0NmwU69vvGSgxSAfRKy8SzG5amXf7FQoXEtCIxQuIYvJoA6qpqF7Yn4uJv6EgoP2RevbL0/3YkTqWmrfy7mYFMQsvu4yEI762ZlIWm6/+2SlNjvVzrznPcp04B+JqSDETOFWEUkH57cNnL0Y5M8ZCbwLMa0S83XLzrDl6r5iY4fM9ejZlxCXHNLDmKxleyJGpHW/+ga+A95923Y2iOGZtILiwpspMd9EaknIvA9QK/C0/ZxTVbj7cFmrRSmCw7EYCkJ7CfGWOfi2LmAQg6jyMbZ3rZl9+cFKle0yBbI5O0wHenb4lPfxsl1Ao3OjkRg+U3XYqmfaOYSn+U3b2V4MSiB2voorDsD60gHM9eRmD/wKDhs0DvGygluIOxLjnT7j4JvmzgcxXM27JvNTMb5yzZeLfT02s06QxcUkulhDNoRHYvzReoh+5qZLoAcxqIGyko51ms64lsNevgjUkJEQts/01ZYg7J/fwjfBiRjeSYvI0TPO+SLvjcSgqV54ORXT1seU+gy9mp7QIQEFd7hP8EZQlWCQo5gYesyiHJ6hE+g1wS13qI7E0GAsps/NhKsafeEfouBRVwK1uDpan4M3kBTF9ohJB60saI9iYPDjLg+Nke9UPf2MGLSsL2oGNR9gDzjbQDMaafKOnSzQUmg0OEcFHqNSciViEMNhgCBHuXIJAxt5w7U31Q72Yjy9eeykZkDNtJbE6R3QeKTZLIjjjjqJV7jQhKDsnTFEYuU/fPU+G4FfZu+jZ+Lp6Os34AXK721/kOvi1GKAoQhp3rFDUa/2YvhOFfz4TU/qetie1AyW01y1xLB/7wf8fzfugOol9e0CZ/g0mRwH8HAwKb3+x9OhEmK/mgw0+04i4NTTiRkeXH6y7afJiMofAukMrgmhrp3kllTddOEDHxkz7274D3J9kelbOP+lW2lpthxlt+cd9nqyU5XTa5s37t/bs7I6eGE6y8e+lNvlrLlSb/EsypbVudf1n2bNXSpsZGFynAYQRV5Go2qq2jLf7q49b0/fZmfr0GH01CTZT6vxZpskyxLNJlVf89qiiWdpsoEzeTRVa/1hlmw27XaTd1MQ5+UZPJLNl1WyxGn/9CZT928aDiPKpIzeUnh2lm+SWZ4kUADhc5fn2baAW35yWwfPlna6hKycUrtTCQjPWnsdNnMbUxus7dTif+zb/ussxn6mpiL5urWzqIqqorPbzp7mkCU3C182zZsqDJvmZflKaVlMcLnMbFuoJMnWn6CTxY/u6igTNEuQiKZR5+ixOvX4urI7hFEcJVm+b3NZg1xe6rFnkqCm9ZbUn3F/gQrdPd6QRemnvnO5SrsWVV2aLFZZsdEdH0Zi5dvbJFvNf1ILKjM0y5Dj07Yp+lIL8TSmSoxdt6k+xUHRpisxL1stJkPN0iviiqI2QlEIl+mcE0pf1NUqcv3JTizBccgKxcumFxPCS1/W1c+KaYItpoKoKmp1zfgcbSTZghhuV82zKndvHi23iRKja2ZWd5jGIMYJHM4jP8Rq6CIHMUnG63xHW6rrgyd5LyaD0cvOpj8sZqlmHj+o3VZLPYvy7KFN38ySF4FaPYIS0TvYFgw1Uxa+h2hB0WQuEI9CsS4oLfAgRkg/wy1aJ14DpVT101BQDkvOPW7Px3+/fnPipYqLdDWtuBYDHmEWUTtSNZM9z4e/NRfrdYw+hpoRL0lLYxVNk4jzZQgebPqeO/s+Q7siXaN4t+pk+Pza+2jMRVdAzdtbJNgPbh/yyrLv5DzUhnOwFMI4gubBJ4dJTd7YqES0j4ViVnKhNwbNYhQO0WMivEN8Fcpe6POHj+TQ4BpoAqKCz9zrjwaq5v5ZiMFgMBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAYDAaDwfAd/wNcTLM79eU5dwAAAABJRU5ErkJggg==">
+
+
+
+  <div class="navbar">
+   
+
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+  <br>
+  <hr>
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Contact</th>
+    <th>Amount</th>
+  </tr>
+  <tr>
+    <td>Ram Shrestha</td>
+    <td>9865730265</td>
+    <td>&#x20AC 106400</td>
+  </tr>
+  <tr>
+    <td>Kushal Shrestha</td>
+    <td>9834634252</td>
+    <td>&#x20AC 906700</td>
+  </tr>
+  <tr>
+    <td>Gita Lama</td>
+    <td>9862167241</td>
+    <td>&#x20AC 65746</td>
+  </tr>
+  <tr>
+    <td>Shree KC</td>
+    <td>9807632165</td>
+    <td>&#x20AC 86576</td>
+  </tr>
+  <tr>
+    <td>Laxmi Yadav</td>
+    <td>9857348804</td>
+    <td>&#x20AC 56778</td>
+  </tr>
+  <tr>
+    <td>Pukar Pradhan</td>
+    <td>9837142309</td>
+    <td>&#x20AC 47479</td>
+  </tr>
+</table>
+
+<div class="rating">
+    <input type="radio" id="star5" name="rating" value="5">
+    <label for="star5">&#9733;</label>
+    <input type="radio" id="star4" name="rating" value="4">
+    <label for="star4">&#9733;</label>
+    <input type="radio" id="star3" name="rating" value="3">
+    <label for="star3">&#9733;</label>
+    <input type="radio" id="star2" name="rating" value="2">
+    <label for="star2">&#9733;</label>
+    <input type="radio" id="star1" name="rating" value="1">
+    <label for="star1">&#9733;</label>
+  </div>
+  
+
+
+
+</body>
+</html>
+
+

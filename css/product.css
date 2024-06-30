@@ -1,0 +1,23 @@
+#card {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid black;
+  width: 250px;
+}
+
+.card > h3 {
+  text-align: center;
+}
+
+.card > p {
+  text-align: center;
+}
+
+.card > h1 {
+  text-align: center;
+}

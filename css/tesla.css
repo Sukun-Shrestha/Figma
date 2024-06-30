@@ -1,0 +1,108 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#search {
+    border-radius: 20px;
+   height: 35px;
+   width: 250px;
+   z-index: 1;
+   outline: none;
+   padding: 0 20px;
+ }
+ 
+ #search-input-wrapper {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ #search-input-wrapper::after {
+   content: "";
+   position: absolute;
+   z-index: 1;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   right: 10px;
+   background: url("https://i.ibb.co/D1dvJTV/icons8-search.gif") no-repeat center;
+   background-size: 23px auto;
+   height: 30px;
+   width: 30px;
+ }
+
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1554744512-d6c603f27c54?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVzbGF8ZW58MHx8MHx8fDA%3D');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 55px;
+    color: #000;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}

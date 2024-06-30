@@ -1,0 +1,135 @@
+
+
+.navbar-brand{
+    font-weight: bold;
+    color: red;
+}
+
+.container h1{
+    text-align: center;
+    padding: 50px;
+   font-size: 200px;
+   background-image: url(../assets/nep.png);
+   color: transparent;
+   background-clip: text;
+   font-size: 200px;
+   background-color: rgb(4, 0, 255);
+   overflow: hidden;
+   animation: reveal 3s ease-out forwards;
+}
+
+ 
+@keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.carousel-item {
+    height: 100vh;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: blue;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 1s ease-in-out;
+}
+
+.nav-item a:hover{
+    color: #530707;
+}
+
+.img{
+    text-align: center;
+    background-color: rgb(212, 203, 192);
+}
+
+.bg-img{
+    background-image: url(../assets/pexels-nastyasensei-66707-335393.jpg);
+    background-size: 1350px;
+     /* background-repeat: no-repeat; */
+}
+
+
+body{
+    font-family: var(--font3);
+   
+}
+h2{
+    font-weight: 900}
+    .container-fluid{
+        max-width: 1200px
+    }
+        .card{
+            background: #868080;box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+            transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+            border: 0;
+            border-radius: 1rem
+        }
+   
+        marquee{
+            font-size: 70px;
+            color: azure;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .input-group {
+            margin-bottom: 15px;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+          
+            
+            .card:hover{
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06)
+            }
+
+           
+    
+            

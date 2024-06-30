@@ -1,0 +1,149 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+#search {
+    border-radius: 20px;
+   height: 35px;
+   width: 250px;
+   z-index: 1;
+   outline: none;
+   padding: 0 20px;
+ }
+ 
+ #search-input-wrapper {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ #search-input-wrapper::after {
+   content: "";
+   position: absolute;
+   z-index: 1;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   right: 10px;
+   background: url("https://i.ibb.co/D1dvJTV/icons8-search.gif") no-repeat center;
+   background-size: 23px auto;
+   height: 30px;
+   width: 30px;
+ }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+img {
+    opacity: 0.5;
+  }
+  
+  img:hover {
+    opacity: 1.0;
+  }
+
+header {
+    background-color: #272222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section p {
+    text-align: center;
+}
+
+.model {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.model img {
+    max-width: 100%;
+}
+
+.technology-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.technology-item img {
+    max-width: 100%;
+}
+
+.gallery-item {
+    margin-bottom: 20px;
+}
+
+.gallery-item img {
+    max-width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

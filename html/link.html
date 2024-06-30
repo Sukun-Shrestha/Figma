@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           Laptop
+        </title>
+        <style>
+            body {
+              margin: 0;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .topnav h2 {
+              color: #f1f1f1;
+            }
+            
+            .topnav {
+              overflow: hidden;
+              background-color: #333;
+              justify-content: space-between;
+             display: flex;
+            }
+            
+            .topnav a {
+              float: left;
+              color: #f2f2f2;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-size: 17px;
+            
+            }
+            
+            .topnav a:hover {
+              background-color: #ddd;
+              color: black;
+            }
+            
+            .topnav a.active {
+           
+              color: white;
+            }
+            div article {
+  display: flex;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+
+
+
+            </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <h2>Laptop</h2>
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+          </div>
+
+          
+           
+           
+                
+          <div>
+            <article> <img src="data:image/jpeg;base64,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">
+                
+            </article>
+         <section>
+          <h2>Acer Nitro 5 Laptop Specifications</h2>
+
+<table>
+  <tr>
+    <th>Specification</th>
+    <th>Details</th>
+  </tr>
+  <tr>
+    <td>Processor</td>
+    <td>Intel Core i5 / i7 (10th Gen)</td>
+  </tr>
+  <tr>
+    <td>Graphics Card</td>
+    <td>NVIDIA GeForce GTX 1650 / 1660 Ti</td>
+  </tr>
+  <tr>
+    <td>RAM</td>
+    <td>8GB / 16GB DDR4</td>
+  </tr>
+  <tr>
+    <td>Storage</td>
+    <td>256GB / 512GB SSD + 1TB HDD</td>
+  </tr>
+  <tr>
+    <td>Display</td>
+    <td>15.6-inch Full HD IPS (1920 x 1080)</td>
+  </tr>
+  <tr>
+    <td>Refresh Rate</td>
+    <td>60Hz / 144Hz</td>
+  </tr>
+  <tr>
+    <td>Connectivity</td>
+    <td>Wi-Fi 6 (802.11ax), Bluetooth 5.0</td>
+  </tr>
+  <tr>
+    <td>Ports</td>
+    <td>USB 3.2 Gen 1, USB 2.0, HDMI, Ethernet</td>
+  </tr>
+  <tr>
+    <td>Battery Life</td>
+    <td>Up to 8 hours</td>
+  </tr>
+  <tr>
+    <td>Operating System</td>
+    <td>Windows 10 Home</td>
+  </tr>
+  <tr>
+    <td>Weight</td>
+    <td>Approximately 5.07 lbs (2.3 kg)</td>
+  </tr>
+</table>
+         </section>
+
+         </div> 
+          
+          
+          
+    </body>
+</html>

@@ -1,0 +1,19 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style for the bank list */
+  .bank-list {
+    list-style: none;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style for bank symbols */
+  .bank-symbol {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 5px;
+  }
